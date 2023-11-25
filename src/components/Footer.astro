@@ -1,7 +1,21 @@
 ---
+import {Image} from "astro:assets";
 const today = new Date();
 ---
 
 <footer class="flex items-center justify-center border-t border-t-gray-200 p-2">
-  &copy; {today.getFullYear()} Aman.
+  &copy; {today.getFullYear()} Arjun.
+
+  <div class="flex ml-96">
+    <!-- Avatar Image -->
+    <a href="/">
+      <Image
+        src="/img/uparrow.png"
+        alt="Avatar"
+        class="rounded-full border border-gray-200 shadow-sm"
+        height={64}
+        width={64}
+      />
+    </a>
+  </div>
 </footer>

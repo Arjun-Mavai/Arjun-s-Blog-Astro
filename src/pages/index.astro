@@ -3,12 +3,13 @@ import {getCollection} from "astro:content";
 import ChevronDown from "../components/ChevronDown.tsx";
 import Layout from "../layouts/Layout.astro";
 import BlogCard from "../components/BlogCard.tsx";
+import {Image} from "astro:assets";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
-<Layout title="Aman's Blog 🚴‍♂️" description="amanmavai.in">
+<Layout title="Arjun's Blog 🚴‍♂️" description="arjunmavai.in">
   <div class="container max-w-5xl mx-auto px-6 font-nunito">
     <div class="h-full text-center flex items-center hero">
       <div>
@@ -18,10 +19,20 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
           </h1>
         </div>
         <div class="mb-12">
-          <h2 class="text-2xl sm:text-3xl font-bold">Welcome to Aman's blog</h2>
+          <h2 class="text-2xl sm:text-3xl font-bold">
+            Welcome to Arjun's blog <a href="/">
+              <Image
+                src="/img/arjun.png"
+                alt="Avatar"
+                class="rounded-full border-gray-200 shadow-sm inline-block"
+                height={44}
+                width={44}
+              />
+            </a>
+          </h2>
         </div>
         <p class="font-bold text-2xl sm:text-3xl sm:leading-normal leading-loose mb-8">
-          Aman is a <span id="frontend-engineer">Frontend Engineer</span>
+          Arjun is a <span id="frontend-engineer">Frontend Engineer</span>
            presently
           <span id="bookstore"
             >engaged in
