@@ -20,7 +20,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
         </div>
         <div class="mb-12">
           <h2 class="text-2xl sm:text-3xl font-bold">
-            Welcome to Arjun's blog <a href="/">
+            <!-- Welcome to Arjun's blog <a href="/">
               <Image
                 src="/img/arjun.png"
                 alt="Avatar"
@@ -28,7 +28,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
                 height={44}
                 width={44}
               />
-            </a>
+            </a> -->
           </h2>
         </div>
         <p class="font-bold text-2xl sm:text-3xl sm:leading-normal leading-loose mb-8">
@@ -36,8 +36,11 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
            presently
           <span id="bookstore"
             >engaged in
-            <a href="https://amanmavai.github.io" class="text-blue-600" target="_blank" rel="noreferrer noopener"
-              >Book Haven.</a
+            <a
+              href="https://arjun-s-blog-astro.vercel.app/"
+              class="text-blue-600"
+              target="_blank"
+              rel="noreferrer noopener">Book Haven.</a
             >
           </span>
            &nbsp; He loves
