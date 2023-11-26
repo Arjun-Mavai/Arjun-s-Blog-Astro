@@ -32,7 +32,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
           </h2>
         </div>
         <p class="font-bold text-2xl sm:text-3xl sm:leading-normal leading-loose mb-8">
-          Arjun is a <span id="frontend-engineer">Frontend Engineer</span>
+          <span id="arjun">Arjun</span> is a <span id="frontend-engineer">Frontend Engineer</span>
            presently
           <span id="bookstore"
             >engaged in
@@ -40,14 +40,14 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
               href="https://arjun-s-blog-astro.vercel.app/"
               class="text-blue-600"
               target="_blank"
-              rel="noreferrer noopener">Book Haven.</a
+              rel="noreferrer noopener">NextJS SSR.</a
             >
           </span>
            &nbsp; He loves
           <span id="awesome-stuff">crafting amazing things</span> and
           <span id="writing">sharing</span> his knowledge along the way, usually about
-          <span id="tech-stack">JavaScript, React, and Remix</span>. Apart from his unconditional love for technology he
-          enjoys reading
+          <span id="tech-stack">JavaScript , TypeScript , React , NextJS , Testing and Remix</span>. Apart from his
+          unconditional love for technology he enjoys reading
           <span id="marvel">Amazing Books</span> and playing
           <span id="games">Badminton</span>
         </p>
@@ -84,6 +84,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
   const stuff = document.querySelector<HTMLElement>("#awesome-stuff")!;
   const writing = document.querySelector<HTMLElement>("#writing")!;
   const stack = document.querySelector<HTMLElement>("#tech-stack")!;
+  const arjun = document.querySelector<HTMLElement>("#arjun")!;
 
   const a1 = annotate(engineer, {
     type: "highlight",
@@ -105,17 +106,24 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
     color: "#FAC791",
   });
   const a5 = annotate(stack, {
-    type: "underline",
-    color: "#E0908B",
+    type: "box",
+    color: "red",
+    multiline: true,
+  });
+
+  const a6 = annotate(arjun, {
+    type: "box",
+    color: "red",
     multiline: true,
   });
 
   const timings = [
+    {annotation: a6, time: 500},
     {annotation: a1, time: 500},
-    {annotation: a2, time: 500},
     {annotation: a3, time: 800},
     {annotation: a4, time: 1000},
     {annotation: a5, time: 500},
+    {annotation: a2, time: 500},
   ];
 
   let currentTime = 0;
